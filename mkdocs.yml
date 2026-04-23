@@ -1,0 +1,73 @@
+site_name: OpsForge Documentation
+site_description: Consolidated toolkit for cybersecurity and cloud infrastructure.
+site_author: JoeMighty
+repo_url: https://github.com/JoeMighty/OpsForge
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Cybersecurity Tools:
+      - Overview: cyber/index.md
+      - Port Scanner: cyber/port-scan.md
+      - Log Analyzer: cyber/log-analyze.md
+      - Integrity Monitor: cyber/integrity-check.md
+      - Subdomain Enumerator: cyber/subdomain-enum.md
+      - Password Entropy: cyber/password-check.md
+      - Packet Sniffer: cyber/packet-sniff.md
+      - Encoder/Decoder: cyber/encode-decode.md
+      - Directory Discovery: cyber/dir-discover.md
+      - SSL Auditor: cyber/ssl-audit.md
+      - Honeypot Listener: cyber/honeypot.md
+      - Vulnerability Fuzzer: cyber/fuzzer.md
+  - Cloud Tools:
+      - Overview: cloud/index.md
+      - Tag Auditor: cloud/tag-audit.md
+      - IAM Linter: cloud/iam-lint.md
+      - Infra Generator: cloud/infra-gen.md
+      - Stale Resource Finder: cloud/stale-find.md
+      - NSG Rule Mapper: cloud/nsg-map.md
+      - Storage Auditor: cloud/storage-audit.md
+      - Image Inspector: cloud/image-inspect.md
+      - Uptime Monitor: cloud/uptime-monitor.md
+      - Pipeline Validator: cloud/pipeline-val.md
+      - Cost Estimator: cloud/cost-estimate.md
+      - Drift Detector: cloud/drift-detect.md
+  - Contributing: contributing.md
