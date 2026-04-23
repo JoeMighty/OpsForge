@@ -26,9 +26,9 @@ def cloud():
     """Cloud infrastructure utilities."""
     pass
 
-# Placeholder for actual tool imports
-# from opsforge.modules.cyber import port_scan
-# cyber.add_command(port_scan.cmd)
+from opsforge.modules.cyber import port_scan, log_analyze
+cyber.add_command(port_scan.cmd)
+cyber.add_command(log_analyze.cmd)
 
 if __name__ == "__main__":
     print_banner()
